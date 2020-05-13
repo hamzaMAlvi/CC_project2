@@ -77,7 +77,7 @@ class AutoScaleContainers(object):
         '''
         This function starts the HAproxy load blancer with the configurations given in the file provided as input.
         '''
-        output = Popen('haproxy -- ' + cfgFileName + '.cfg', shell=True, stdout=PIPE)
+        output = Popen('haproxy -f ' + cfgFileName + '.cfg', shell=True, stdout=PIPE)
         output.communicate()
         pass
 
